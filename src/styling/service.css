@@ -1,0 +1,148 @@
+.container {
+  background: #0b1c2e;
+  padding: 100px 80px;
+  color: #e2e8f0;
+}
+h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f1f5f9;
+}
+p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #94a3b8;
+}
+.child-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+}
+.box {
+  width: 30%;
+  padding: 25px;
+  border-radius: 15px;
+  background: #11263c;
+  border: 1px solid rgba(179, 207, 229, 0.15);
+  transition: all 0.3s ease;
+}
+.box:hover {
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.2);
+}
+.box h3 {
+  color: #b3cfe5;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.box p {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.box ul {
+  padding: 15px;
+  padding-left: 18px;
+}
+.box ul li {
+  color: #cbd5f5;
+  padding: 6px 0;
+  font-size: 13px;
+  list-style: disc;
+}
+.pic {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(179, 207, 229, 0.1);
+  border-radius: 50%;
+}
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* =========================
+   Tablet Responsive
+========================= */
+
+@media (max-width: 992px) {
+  .container {
+    padding: 70px 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .child-container {
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    width: 45%;
+  }
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 50px 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .child-container {
+    padding: 10px 0;
+    gap: 18px;
+  }
+
+  .box {
+    width: 100%;
+    min-width: unset;
+    padding: 20px;
+  }
+
+  .box h3 {
+    font-size: 18px;
+  }
+
+  .box p {
+    font-size: 13px;
+  }
+
+  .box ul li {
+    font-size: 12px;
+  }
+
+  .pic {
+    width: 60px;
+    height: 60px;
+  }
+}

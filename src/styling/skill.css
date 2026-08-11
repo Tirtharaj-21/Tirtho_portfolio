@@ -1,0 +1,110 @@
+/* skills.css */
+
+.skills-section {
+  padding: 80px 60px;
+  background: #0b1c2e; /* consistent with about */
+  color: #e2e8f0;
+}
+
+/* Header */
+.skills-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.skills-header h1 {
+  font-size: 40px;
+  color: #f1f5f9;
+  font-weight: 700;
+}
+.skills-header p {
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
+/* Layout */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  gap: 30px;
+}
+
+/* Cards */
+.skills-card {
+  background: #11263c;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+
+  border: 1px solid rgba(179, 207, 229, 0.15);
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); */
+}
+.skills-card:hover {
+  transform: translateY(-6px);
+  border-color: #3b82f6;
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.2);
+}
+/* Skill row */
+.skill {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* Bar */
+.bar {
+  height: 6px;
+  background: rgba(179, 207, 229, 0.15);
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+/* =========================   Tablet Responsive========================= */
+@media (max-width: 992px) {
+  .skills-section {
+    padding: 60px 40px;
+  }
+  .skills-header h1 {
+    font-size: 34px;
+  }
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+} /* =========================   Mobile Responsive========================= */
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 50px 20px;
+  }
+  .skills-header {
+    margin-bottom: 35px;
+  }
+  .skills-header h1 {
+    font-size: 28px;
+  }
+  .skills-header p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .skills-card {
+    padding: 20px;
+  }
+  .skills-card h3 {
+    font-size: 20px;
+  }
+  .skill {
+    font-size: 13px;
+  }
+}

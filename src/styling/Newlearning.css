@@ -1,0 +1,122 @@
+.learning-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0b1c2e;
+}
+
+.learning-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+}
+
+.learning-subtitle {
+  color: #94a3b8;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.learning-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.learning-card {
+  background: #11263c;
+  padding: 20px 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.learning-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  border-color: #3b82f6;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
+}
+
+.icon,
+.img {
+  width: 100%;
+  height: 50px;
+}
+.icon img,
+image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: 0.3s;
+}
+.learning-card h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================   Tablet Responsive========================= */
+@media (max-width: 992px) {
+  .learning-section {
+    padding: 55px 30px;
+  }
+  .learning-title {
+    font-size: 1.8rem;
+  }
+  .learning-subtitle {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+  .learning-card {
+    width: 160px;
+    padding: 18px 24px;
+  }
+  .icon img {
+    width: 60px;
+    height: 60px;
+  }
+} /* =========================   Mobile Responsive========================= */
+@media (max-width: 600px) {
+  .learning-section {
+    padding: 45px 20px;
+  }
+  .image img {
+    width: 70px;
+  }
+  .learning-title {
+    font-size: 1.5rem;
+  }
+  .learning-subtitle {
+    font-size: 14px;
+    margin-bottom: 28px;
+    padding: 0 10px;
+  }
+  .learning-container {
+    gap: 16px;
+  }
+  .learning-card {
+    width: 100%;
+    max-width: 250px;
+    padding: 18px 20px;
+  }
+  .icon {
+    height: 60px;
+  }
+  .icon img {
+    width: 55px;
+    height: 55px;
+  }
+  .learning-card h4 {
+    font-size: 15px;
+  }
+}

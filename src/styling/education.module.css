@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+.section {
+  flex: 1;
+}
+.section h2 {
+  color: teal;
+  margin-bottom: 30px;
+}
+.timeline {
+  position: relative;
+  border-left: 2px solid #ccc;
+  padding-left: 30px;
+}
+.cardWrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  background: teal;
+  border-radius: 50%;
+  position: absolute;
+  left: -38px;
+  top: 10px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.card p {
+  color: teal;
+  font-weight: bold;
+}
+.card h3 {
+  margin: 10px 0;
+}
+.card span {
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+}
