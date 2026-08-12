@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../styling/Contact.css";
+import styles from "../styling/Contact.module.css";
 import emailjs from "@emailjs/browser";
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,14 +23,15 @@ const Contact = () => {
       to_name: "Tirthoraj",
       message: message,
     };
+
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then((res) => {
         console.log("Email sent successfully", res);
 
-        // SUCCESS MESSAGE
-        setSuccessMessage("Message sent successfully ");
+        setSuccessMessage("Message sent successfully");
         setErrorMessage("");
+
         setTimeout(() => {
           setSuccessMessage("");
         }, 4000);
@@ -41,32 +43,37 @@ const Contact = () => {
         setSuccessMessage("");
       });
   };
+
   return (
-    <section id="contact" className="sendmesg">
-      <form onSubmit={handlesubmit} className="sendmesg">
+    <section id="contact" className={styles.sendmesg}>
+      <form onSubmit={handlesubmit} className={styles.sendmesg}>
         <h3>Send a Message</h3>
-        <div className="details">
-          <label htmlFor="name">Your Name: </label>
+
+        <div className={styles.details}>
+          <label htmlFor="name">Your Name:</label>
+
           <input
+            id="name"
             type="text"
             placeholder="Enter your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
-          <br />
-          <br />
-          <label htmlFor="email">Email Address: </label>
+
+          <label htmlFor="email">Email Address:</label>
+
           <input
-            type="text"
+            id="email"
+            type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <br />
-          <br />
-          <label htmlFor="mesg">Message: </label>
+
+          <label htmlFor="message">Message:</label>
+
           <textarea
             id="message"
             placeholder="Tell me about your project or how we can work together"
@@ -75,14 +82,18 @@ const Contact = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="btn">
+
+        <button type="submit" className={styles.btn}>
           Send Message
         </button>
-        {/* SUCCESS MESSAGE */}
-        {successMessage && <div className="success-msg">{successMessage}</div>}
 
-        {/* ERROR MESSAGE */}
-        {errorMessage && <div className="error-msg">{errorMessage}</div>}
+        {successMessage && (
+          <div className={styles.successMsg}>{successMessage}</div>
+        )}
+
+        {errorMessage && (
+          <div className={styles.errorMsg}>{errorMessage}</div>
+        )}
       </form>
     </section>
   );

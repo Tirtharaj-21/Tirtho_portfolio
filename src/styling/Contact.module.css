@@ -3,6 +3,7 @@
   padding: 100px 20px;
   color: #e2e8f0;
 }
+
 .details {
   width: 60%;
   height: 500px;
@@ -16,6 +17,7 @@
   border: 1px solid rgba(179, 207, 229, 0.15);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
 .sendmesg h3 {
   text-align: center;
   font-size: 30px;
@@ -23,104 +25,118 @@
   margin-bottom: 25px;
   color: #f1f5f9;
 }
+
 .sendmesg label {
   display: block;
   margin-bottom: 6px;
   font-size: 14px;
   color: #94a3b8;
 }
+
 .sendmesg input {
   width: 80%;
   padding: 12px 15px;
   margin-bottom: 18px;
-
   border-radius: 10px;
   border: 1px solid rgba(179, 207, 229, 0.2);
-
   background: #0b1c2e;
   color: #e2e8f0;
-
   outline: none;
   transition: 0.3s;
 }
+
 .sendmesg textarea {
   width: 80%;
-  height: 120px; /* fixed height */
+  height: 120px;
   padding: 12px 15px;
-
   border-radius: 10px;
   border: 1px solid rgba(179, 207, 229, 0.2);
-
   background: #0b1c2e;
   color: #e2e8f0;
-
   outline: none;
-  resize: none; /* 🔥 prevents stretching */
+  resize: none;
   transition: 0.3s;
 }
+
 .sendmesg input:focus,
 .sendmesg textarea:focus {
   border-color: #3b82f6;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
+
 .btn {
   width: 50%;
   padding: 14px;
   border-radius: 10px;
-
   background: #3b82f6;
   color: white;
   border: none;
-  margin: 0 auto;
+  margin: 20px auto;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   display: block;
-  margin: 20px auto;
   transition: all 0.3s ease;
 }
+
 .btn:hover {
   background: #2563eb;
   transform: translateY(-2px);
 }
 
-/* =========================   Tablet Responsive========================= */
+/* =========================
+   Tablet Responsive
+========================= */
+
 @media (max-width: 992px) {
   .sendmesg {
     padding: 70px 30px;
   }
+
   .details {
     width: 80%;
     padding: 22px;
   }
+
   .btn {
     width: 60%;
   }
-} /* =========================   Mobile Responsive========================= */
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
 @media (max-width: 600px) {
   .sendmesg {
     padding: 50px 15px;
   }
+
   .sendmesg h3 {
     font-size: 24px;
   }
+
   .details {
     width: 100%;
     min-height: auto;
     padding: 18px;
     border-radius: 12px;
   }
+
   .sendmesg label {
     font-size: 13px;
   }
+
   .sendmesg input,
   .sendmesg textarea {
     font-size: 14px;
     padding: 10px 12px;
   }
+
   .sendmesg textarea {
     height: 100px;
   }
+
   .btn {
     width: 100%;
     font-size: 14px;
@@ -128,7 +144,7 @@
   }
 }
 
-.success-msg {
+.successMsg {
   width: fit-content;
   margin: 15px auto;
   padding: 12px 20px;
@@ -142,7 +158,7 @@
   animation: fadeIn 0.4s ease;
 }
 
-.error-msg {
+.errorMsg {
   width: fit-content;
   margin: 15px auto;
   padding: 12px 20px;
