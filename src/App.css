@@ -5,7 +5,9 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   background: #0f172a;
+  overflow-x: hidden;
 }

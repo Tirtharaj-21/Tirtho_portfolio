@@ -3,6 +3,7 @@ import About from "./component/About";
 import Available from "./component/Available";
 import Contact from "./component/Contact";
 import Education from "./component/Education";
+import Experience from "./component/Experience";
 import Footer from "./component/Footer";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
@@ -18,6 +19,7 @@ function App() {
       <Home />
       <About />
       <Education />
+      <Experience />
       <Skills />
       <Project />
       <Newlearning />
