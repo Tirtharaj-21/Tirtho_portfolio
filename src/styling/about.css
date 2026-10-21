@@ -1,134 +1,150 @@
 /* about.css */
 
 .about-section {
-  padding: 80px 60px;
-  background: #0b1c2e; /* softer dark (not harsh black) */
+  padding: 80px 20px;
+  background: #0b1c2e;
   color: #e2e8f0;
+}
+
+/* Capped width, centered */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Header */
 .about-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 26px;
 }
 
 .about-header h1 {
-  font-size: 36px;
+  font-size: 40px;
   color: #f1f5f9;
   font-weight: 700;
+  margin: 0;
 }
 
 .about-header p {
   color: #94a3b8;
-  max-width: 800px;
-  margin: 10px auto 0;
-  line-height: 1.7;
+  max-width: 760px;
+  margin: 12px auto 0;
+  line-height: 1.8;
 }
 
-/* Layout */
-.about-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
+/* Journey box */
 .about-journey {
-  padding: 30px;
-  background: #11263c; /* card color */
-  border-radius: 15px;
+  padding: 36px 40px;
+  background: #11263c;
+  border-radius: 14px;
   border: 1px solid rgba(179, 207, 229, 0.15);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
-.about-journey {
+  text-align: center;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
-/* Hover effect */
 .about-journey:hover {
   transform: translateY(-6px);
   border-color: #3b82f6;
   box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
 }
+
 .about-journey h2 {
-  margin-bottom: 15px;
+  margin: 0 0 16px;
   color: #3b82f6;
   font-weight: 600;
+  font-size: 30px;
 }
 
 .about-journey p {
-  color: #cbd5f5;
-  line-height: 1.6;
+  color: #cbd5e1;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* Hobbies + Goal */
 .hobbies-goal {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
 }
 
-.card {
-  flex: 0 0 auto; /* stop stretching */
-  width: 300px;
+.hobbies-goal .card {
   background: #11263c;
-  padding: 10px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  padding: 24px 28px;
+  border-radius: 14px;
   border: 1px solid rgba(179, 207, 229, 0.15);
+  transition: all 0.3s ease;
 }
 
-.card:hover {
+.hobbies-goal .card:hover {
   transform: translateY(-5px);
+  border-color: #3b82f6;
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
 }
 
 .hobbies-goal .card h3 {
-  color: #b3cfe5; /* your secondary color */
-
-  margin-bottom: 10px;
+  color: #f1f5f9;
+  margin: 0 0 14px;
   font-weight: 600;
-}
-.hobbies-goal .card p {
-  text-align: left;
-  color: #94a3b8;
-  line-height: 1.6;
+  font-size: 20px;
 }
 
-/* =========================   Tablet Responsive========================= */
+.hobbies-goal .card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-goal .card li {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.hobbies-goal .card li:last-child {
+  margin-bottom: 0;
+}
+
+.hobbies-goal .card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+/* Tablet */
 @media (max-width: 992px) {
   .about-section {
-    padding: 60px 40px;
+    padding: 60px 30px;
   }
   .about-header h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
   .about-header p,
   .about-journey p {
     font-size: 15px;
   }
-  .hobbies-goal {
-    gap: 20px;
-  }
-  .card {
-    width: 280px;
-  }
-} /* =========================   Mobile Responsive========================= */
+}
+
+/* Mobile */
 @media (max-width: 600px) {
   .about-section {
-    padding: 50px 20px;
-  }
-  .about-header {
-    margin-bottom: 35px;
+    padding: 50px 16px;
   }
   .about-header h1 {
     font-size: 28px;
   }
   .about-header p {
     font-size: 14px;
-    line-height: 1.8;
-    text-align: justify;
   }
   .about-journey {
     padding: 22px;
@@ -138,22 +154,18 @@
   }
   .about-journey p {
     font-size: 14px;
-    text-align: justify;
   }
   .hobbies-goal {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: 18px;
   }
-  .card {
-    width: 100%;
-    max-width: 320px;
-    padding: 18px;
+  .hobbies-goal .card {
+    padding: 20px;
   }
   .hobbies-goal .card h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
-  .hobbies-goal .card p {
+  .hobbies-goal .card li {
     font-size: 14px;
   }
 }

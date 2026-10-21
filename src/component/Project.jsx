@@ -86,10 +86,6 @@ const Project = () => {
                   <button>Live</button>
                 </a>
               )}
-
-              <a href={project.video} target="_blank" rel="noreferrer">
-                {/* <button>Video</button> */}
-              </a>
             </div>
           </Reveal>
         ))}

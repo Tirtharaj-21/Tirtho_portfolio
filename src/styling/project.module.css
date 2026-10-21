@@ -2,67 +2,96 @@
   background: #0f172a;
   padding: 80px 20px;
 }
+
 .heading {
   text-align: center;
   color: #0f7c86;
   font-size: 3rem;
   margin-bottom: 50px;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: stretch;
 }
+
 .innerbox {
   background: #fff;
-  padding: 24px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .innerbox:hover {
-  box-shadow: 0 12px 30px rgba(15, 124, 134, 0.35);
+  box-shadow: 0 14px 34px rgba(15, 124, 134, 0.45);
+  transform: translateY(-4px);
 }
+
 .head {
   color: #111;
-  margin-bottom: 14px;
+  margin: 0 0 14px;
   text-align: center;
+  font-size: 1.15rem;
 }
+
+/* same 16:9 frame for every screenshot */
 .mainbox {
   width: 100%;
-  height: 210px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid #eee;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
 }
+
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: top center;
   display: block;
+  transition: transform 0.4s ease;
 }
+
+.innerbox:hover .image {
+  transform: scale(1.04);
+}
+
 .description {
-  margin-top: 14px;
-  color: #555;
+  margin-top: 16px;
   flex: 1;
 }
+
 .description span {
   color: #0f7c86;
   font-weight: 700;
+  font-size: 0.95rem;
 }
+
 .description p {
-  margin-top: 6px;
-  line-height: 1.5;
+  margin: 6px 0 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #374151;
 }
+
+/* room for two rows of tags, so buttons line up across cards */
 .tech {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   gap: 8px;
-  margin: 14px 0;
+  margin: 16px 0;
+  min-height: 68px;
 }
+
 .tech span {
   background: rgba(15, 124, 134, 0.12);
   color: #0f7c86;
@@ -71,20 +100,28 @@
   font-size: 0.85rem;
   font-weight: 600;
 }
+
 .btnbox {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
+
+.btnbox a {
+  text-decoration: none;
+}
+
 .btnbox button {
   background: #0f7c86;
   color: #fff;
   border: none;
-  padding: 8px 18px;
+  border-radius: 6px;
+  padding: 9px 20px;
   cursor: pointer;
   font-weight: 600;
   transition: background 0.3s ease;
 }
+
 .btnbox button:hover {
   background: #0b5d65;
 }
