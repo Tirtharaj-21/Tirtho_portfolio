@@ -29,6 +29,10 @@ const Contact = () => {
       .then((res) => {
         console.log("Email sent successfully", res);
 
+        setName("");
+        setEmail("");
+        setMessage("");
+
         setSuccessMessage("Message sent successfully");
         setErrorMessage("");
 
@@ -91,9 +95,7 @@ const Contact = () => {
           <div className={styles.successMsg}>{successMessage}</div>
         )}
 
-        {errorMessage && (
-          <div className={styles.errorMsg}>{errorMessage}</div>
-        )}
+        {errorMessage && <div className={styles.errorMsg}>{errorMessage}</div>}
       </form>
     </section>
   );
