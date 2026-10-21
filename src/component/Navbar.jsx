@@ -24,10 +24,6 @@ const Navbar = () => {
               <a href="#education">Education</a>
             </li>
             <li>
-              <a href="#education">Internship</a>
-            </li>
-
-            <li>
               <a href="#experience">Experience</a>
             </li>
             <li>
@@ -42,7 +38,6 @@ const Navbar = () => {
           </ul>
         </nav>
       </header>
-      <hr className="nav-divider" />
     </>
   );
 };
