@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styling/home.css";
 import portpic from "../assets/Picture.jpeg";
-import cv from "../TIRTHARAJ_GOSWAMI.pdf";
+import cv from "../TIRTHARAJ_GOSWAMI_RESUME_updated.pdf";
 
 const ROLES = ["ECE Graduate", "Web Developer", "Tech Enthusiast"];
 

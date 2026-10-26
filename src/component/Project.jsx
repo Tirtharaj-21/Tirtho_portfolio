@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../styling/project.module.css";
 import Reveal from "./Reveal";
-
+import fitness from "../assets/fitness.png";
 import job from "../assets/indeed.JPG";
 import ecommerce from "../assets/E-commerce.JPG";
 import chat from "../assets/Real time chat.JPG";
@@ -35,6 +35,27 @@ const projects = [
       "Real-time chat application using Java Socket Programming for instant communication between multiple users.",
     tech: ["Java", "Socket Programming"],
     github: "https://github.com/Tirtharaj-21/Real_time_chat-Application",
+  },
+  {
+    id: 4,
+    title: "AI-Powered Fitness Tracker (Microservices Backend)",
+    image: fitness,
+    description:
+      "Backend system built as six Spring Boot microservices (User, Activity, AI, API Gateway, Config Server, Eureka Server). Requests are secured with Keycloak OAuth2/JWT at the gateway, workout events flow asynchronously through Apache Kafka, and the AI service uses the Gemini API to generate personalized fitness recommendations stored in MongoDB.",
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud",
+      "Kafka",
+      "Keycloak",
+      "MongoDB",
+      "MySQL",
+      "React.js",
+      "Bootstrap",
+      "Redux",
+    ],
+    github:
+      "https://github.com/Tirtharaj-21/AI-powered-fitness-backend-microservice",
   },
 ];
 
