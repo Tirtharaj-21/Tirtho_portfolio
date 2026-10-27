@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tirtho-portfolio-66aw.vercel.app/sitemap.xml

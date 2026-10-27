@@ -63,7 +63,7 @@ const Project = () => {
   return (
     <section id="project" className={style.section}>
       <Reveal direction="up">
-        <h1 className={style.heading}>My Projects</h1>
+        <h2 className={style.heading}>My Projects</h2>
       </Reveal>
 
       <div className={style.grid}>

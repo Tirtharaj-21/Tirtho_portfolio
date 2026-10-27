@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <section className="skills-section" id="skill">
       <div className="skills-header">
-        <h1>My Skills</h1>
+        <h2>My Skills</h2>
         <p>
           A comprehensive set of technical skills acquired through education,
           training, and hands-on project experience.

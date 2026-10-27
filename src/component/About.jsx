@@ -7,7 +7,7 @@ const About = () => {
       <div className="about-container">
         {/* Heading */}
         <div className="about-header">
-          <h1>About Me</h1>
+          <h2>About Me</h2>
           <p>
             Full Stack Developer skilled in MERN and Java technologies, with a
             strong focus on building real-world, user-centric applications. I
